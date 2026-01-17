@@ -43,12 +43,12 @@ int main() {
             else if (poziom == 3) { maxLiczba = 250; komunikat = "Czujesz sie jak Pro? To zgaduj: "; }
             else { cout << "Niepoprawny wybor poziomu!\n"; continue; }
 
-            // Tryb zakładu
+            
             char trybZakladu;
             cout << "Czy chcesz grac w trybie zakladu? (t/n): ";
             cin >> trybZakladu;
 
-            int maxProby = 1000000; // Domyślnie bardzo duża liczba prób
+            int maxProby = 1000000; 
             if (trybZakladu == 't' || trybZakladu == 'T') {
                 cout << "Podaj maksymalna liczbe prob: ";
                 cin >> maxProby;
@@ -60,7 +60,7 @@ int main() {
 
             while (strzal != liczba) {
                 proby++;
-                cout << "Proba #" << proby << ": " << komunikat; // Wyświetlanie liczby prób
+                cout << "Proba #" << proby << ": " << komunikat; 
                 cin >> strzal;
 
                 if (strzal > liczba) {
@@ -80,7 +80,7 @@ int main() {
                     else cout << "Twoja liczba wciaz spi, podnies ja!\n";
                 }
 
-                // Sprawdzenie, czy przekroczono limit prób w trybie zakładu
+               
                 if (proby >= maxProby) {
                     cout << "Przekroczyles limit prob! Przegrales!\n";
                     break;
@@ -109,7 +109,7 @@ int main() {
 
             while (strzal != liczba) {
                 proby++;
-                cout << "Proba #" << proby << ": Jaka to liczba?: "; // Wyświetlanie liczby prób
+                cout << "Proba #" << proby << ": Jaka to liczba?: "; 
                 cin >> strzal;
                 if (strzal != liczba) cout << "Zle! Sprobuj ponownie.\n";
             }
